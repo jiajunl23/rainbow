@@ -9,7 +9,9 @@ const COLOR = "black"
 async function createGIF (x, y) {
   const gif = await nn.loadImage(GIF)
   nn.create("img")
-    .set({src: GIF})
+    .set({
+    src: `${GIF}#${Math.random()}`
+  })
     .css({
     position: "absolute",
     left: x - gif.width / 2,
